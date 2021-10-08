@@ -13,8 +13,7 @@ import javax.xml.bind.annotation.XmlTransient;
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private String nombre; 
-	protected List<Message> mensajes; 
+	private String nombre;
 	@XmlTransient
 	private int afuego = 6;
 
@@ -33,6 +32,10 @@ public class User implements Serializable {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 	@Override

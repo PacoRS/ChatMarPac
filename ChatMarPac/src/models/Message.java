@@ -7,6 +7,7 @@ import java.util.List;
 public class Message {
 protected String mensaje="";
 protected LocalDateTime fechaHora=LocalDateTime.now();
+private User u=new User(mensaje);
 
 
 public Message() {
