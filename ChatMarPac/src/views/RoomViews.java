@@ -19,10 +19,15 @@ import org.apache.felix.resolver.Util;
 import models.Room;
 import models.User;
 import utils.JAXBManager;
-
+/**
+ * Esta es la vista de nuestro programa
+ */
 public class RoomViews {
 	// File file = new File("misala.xml");
 	public void mainmenu() {
+		/**
+		 * Menu principal
+		 */
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Loading previus data...");
@@ -55,7 +60,9 @@ public class RoomViews {
 			}
 		} while (selected != 3);
 	}
-
+/**
+ * Crea un usuario en el xml añadiendo su nick name
+ */
 	public static void newUser() {
 
 		System.out.println("introduce el nickname");
@@ -75,7 +82,9 @@ public class RoomViews {
 			e.printStackTrace();
 		}
 	}
-
+/**
+ * Añade una sala en el xml poniendo su nombre de la sala
+ */
 	public static void newSala() {
 
 		System.out.println("introduce el nombre de la sala");

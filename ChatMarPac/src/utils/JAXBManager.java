@@ -9,7 +9,11 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
 import models.Room;
-
+/**
+ * Controla que el xml este creado o no y escribe en el los datos
+ * @author Paco
+ *
+ */
 public class JAXBManager {
 	public static void marshal(Room bl) throws JAXBException{
 		marshal(bl,"ejemplo.xml");
