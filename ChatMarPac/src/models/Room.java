@@ -1,6 +1,7 @@
 package models;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -10,14 +11,16 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name="room")
-public class Room {
+public class Room implements Serializable{
 	
-	//private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
 	private String nombreSala = "";
-	private List<User> user;
-	private List<Message> mensajes;
+	private List<User> user= new ArrayList<>();
+	private List<Message> mensajes=new ArrayList<>();
 
+	
+	
 	public Room() {
 		super();
 	}
@@ -54,8 +57,11 @@ public class Room {
 	public void setMensajes(List<Message> mensajes) {
 		this.mensajes = mensajes;
 	}
+	public void addUser(User newUser) {
+		this.user.add(newUser);
+	}
 
-	@Override
+	
 	public String toString() {
 		return "Room [nombreSala=" + nombreSala + ", user=" + user + ", mensajes=" + mensajes + "]";
 	}

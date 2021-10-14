@@ -64,7 +64,7 @@ public class Message implements Serializable {
 	}
 
 
-	@Override
+	
 	public String toString() {
 		return "Message [mensaje=" + mensaje + ", fechaHora=" + fechaHora + ", u=" + u + "]";
 	}

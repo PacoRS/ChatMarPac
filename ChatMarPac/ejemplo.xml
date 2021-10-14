@@ -1,18 +1,4 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <room>
-	<nombreSala>Soy el nombre de la sala</nombreSala>
-		<user>
-			<usuario>
-				<nombre>Paco</nombre>
-			
-	   		</usuario>
-		</user>
-		
-		<mensajes>
-			<message>
-				<mensaje>hola que tal</mensaje>
-				<fechaHora>12-10-2021 23:02</fechaHora>
-				<usuario>Paco</usuario>
-			</message>
-		</mensajes>
+    <nombreSala>pepe</nombreSala>
 </room>

@@ -39,7 +39,7 @@ public class User implements Serializable {
 		return serialVersionUID;
 	}
 
-	@Override
+	
 	public String toString() {
 		return "User [nombre=" + nombre + "]";
 	}

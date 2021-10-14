@@ -1,6 +1,7 @@
 package models;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +17,12 @@ import views.RoomViews;
 
 public class EjecutableJAXB {
 
-	public static void main(String[] args) throws JAXBException {
+	public static void main(String[] args) throws JAXBException, IOException {
+		
+		RoomViews r=new RoomViews();
+		r.mainmenu();
+		
+		/*
 		JAXBContext context = JAXBContext.newInstance(Room.class);
 		Unmarshaller unmarshaller = context.createUnmarshaller();
 		Marshaller marshaller = context.createMarshaller();
@@ -40,7 +46,7 @@ public class EjecutableJAXB {
 		}
 	}
 
-	public static void escribirxml(Room sala, Marshaller marshaller) {
+	public static void escribirxml(Room sala, Marshaller marshallers) {
 
 		sala.setNombreSala("Prueba 3");
 
@@ -56,17 +62,18 @@ public class EjecutableJAXB {
 		sala.setUser(users);
 
 		try {
-			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+			marshallers.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 		} catch (PropertyException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		// marshaller.marshal(sala, System.out);
 		try {
-			marshaller.marshal(sala, new File("misala.xml"));
+			marshallers.marshal(sala, new File("misala.xml"));
 		} catch (JAXBException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 	}
+	
 }
